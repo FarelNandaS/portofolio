@@ -25,7 +25,7 @@ export default function Home() {
       desc: "TahuAnimeList is a web application for managing and browsing your favorite anime lists. Built using Next.js, it provides a user-friendly interface for anime fans.",
       href: "https://tahuanimelist.vercel.app",
       img: {
-        src: "/images/priview tahuanimelist.png",
+        src: "/images/tahuanimelist.png",
         alt: "priview tahuanimelist.png",
       },
     },
