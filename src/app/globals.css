@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-primary: "#344E41";
+    --color-second: "#3A5A40";
+    --color-third: "#588157";
+    --color-fourth: "#A3B18A";
+    --color-fiveth: "#DAD7CD";
+}
+
 html {
     scrollbar-width: none;
 }

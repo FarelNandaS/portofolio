@@ -10,12 +10,14 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#2E3532",
-        second: "#7E9181",
-        third: "#C7CEDB",
+        darker: "#344E41",
+        dark: "#3A5A40",
+        primary: "#588157",
+        light: "#A3B18A",
+        lighter: "#DAD7CD"
       },
       fontFamily: {
-        cursive: ['cursive'],
+        test: ['url("https://fonts.googleapis.com/css2?family=Monomakh&display=swap")'],
       },
     },
   },
