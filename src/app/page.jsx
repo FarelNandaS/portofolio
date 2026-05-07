@@ -4,6 +4,7 @@ import Image from "next/image";
 import Card from "./components/card";
 import { motion, scale, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
+import TechBadge from "./components/techBadge";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -41,6 +42,27 @@ export default function Home() {
     },
   ];
 
+  const techStack = {
+    languages: [
+      { name: "JavaScript", icon: "https://skillicons.dev/icons?i=javascript" },
+      { name: "PHP", icon: "https://skillicons.dev/icons?i=php" },
+      { name: "HTML5", icon: "https://skillicons.dev/icons?i=html" },
+      { name: "CSS3", icon: "https://skillicons.dev/icons?i=css" },
+    ],
+    frameworks: [
+      { name: "Next.js", icon: "https://skillicons.dev/icons?i=nextjs" },
+      { name: "React", icon: "https://skillicons.dev/icons?i=react" },
+      { name: "Tailwind CSS", icon: "https://skillicons.dev/icons?i=tailwind" },
+      { name: "Laravel", icon: "https://skillicons.dev/icons?i=laravel" },
+    ],
+    tools: [
+      { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
+      { name: "GitHub", icon: "https://skillicons.dev/icons?i=github" },
+      { name: "VS Code", icon: "https://skillicons.dev/icons?i=vscode" },
+      { name: "Postman", icon: "https://skillicons.dev/icons?i=postman" },
+    ],
+  };
+
   return (
     <>
       <motion.header
@@ -52,7 +74,7 @@ export default function Home() {
         className="flex justify-between items-center w-full p-4 fixed z-20 text-xl backdrop-blur-sm"
       >
         <h1 className="text-2xl">Farel</h1>
-        <nav>
+        <nav className="hidden md:flex">
           <ul className="flex gap-6 ">
             <li>
               <button className="cursor-pointer hover:text-primary hover:bg-fiveth hover:transition-all hover:duration-150 rounded p-1">
@@ -142,15 +164,46 @@ export default function Home() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex w-[90vw]"
+          className="flex flex-col md:flex-row justify-center w-[90vw]"
         >
           <Image
             src={"/images/tech-stack.svg"}
             width={300}
             height={300}
-            className="w-1/3"
+            className=" mb-4 md:mb-0 md:w-1/3 w-[90vw]"
           />
-          <div className="w-2/3"></div>
+          <div className="md:w-2/3 md:ml-12 w-[90vw]">
+            <div className="flex flex-col w-[100%] mb-4">
+              <h5 className="text-2xl font-bold mb-4">Bahasa Pemerograman</h5>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {
+                  techStack.languages.map((item, index) => (
+                    <TechBadge name={item.name} icon={item.icon} key={index}/>
+                  ))
+                }
+              </div>
+            </div>
+            <div className="flex flex-col w-[100%] mb-4">
+              <h5 className="text-2xl font-bold mb-4">Framework & Library</h5>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {
+                  techStack.frameworks.map((item, index) => (
+                    <TechBadge name={item.name} icon={item.icon} key={index}/>
+                  ))
+                }
+              </div>
+            </div>
+            <div className="flex flex-col w-[100%] mb-4">
+              <h5 className="text-2xl font-bold mb-4">Tools</h5>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {
+                  techStack.tools.map((item, index) => (
+                    <TechBadge name={item.name} icon={item.icon} key={index}/>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
         </motion.div>
       </section>
 
@@ -159,19 +212,19 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 h-5/6">
           {projects.map((project, index) => (
             <Card
-              title={project.title || ""}
-              techs={project.techs || []}
-              desc={project.desc || ""}
-              href={project.href || ""}
-              src={project.img.src || ""}
-              alt={project.img.alt || ""}
+              title={project.title ?? ""}
+              techs={project.techs ?? []}
+              desc={project.desc ?? ""}
+              href={project.href ?? ""}
+              src={project.img.src ?? ""}
+              alt={project.img.alt ?? ""}
               key={index}
             ></Card>
           ))}
         </div>
       </section>
 
-      <section className="h-fit gap-8 p-4 flex flex-col justify-center items-center">
+      <section className="min-h-[110vh] bg-dark gap-8 p-4 flex flex-col justify-center items-center">
         <h3 className="font-bold text-3xl mt-4 ">My Experiance</h3>
         <div></div>
       </section>
