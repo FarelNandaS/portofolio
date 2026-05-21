@@ -14,7 +14,10 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Farel Nanda Setiawan",
-  icon: "",
+  description: "Web Portofolio",
+  icons: {
+    icon: "/images/favicon.png",
+  }
 };
 
 export default function RootLayout({ children }) {
