@@ -85,11 +85,11 @@ export default function Home() {
     },
     {
       img: {
-        src: ""
+        src: "",
       },
       title: "Mengikut Kelas Gamelab Game Developer",
-      desc: "pada tahun 2025, saya mengikuti sebuah kelas pelatihan milik Gamelab tentang game developer. dalam kelas ini saya diberikan pelatihan malalui beberapa modul mulai dari dasar javascript, membangun game melalui engine constract, dan juga game canvas dasar. dalam kelas ini saya mendapatkan pengalaman untuk membuat sebuah game dengan engine constract yang berbasis javascipt dan juga mempelajari dasar javascript hingga dapat membuat sebuah game hanya dengan javascipt."
-    }
+      desc: "pada tahun 2025, saya mengikuti sebuah kelas pelatihan milik Gamelab tentang game developer. dalam kelas ini saya diberikan pelatihan malalui beberapa modul mulai dari dasar javascript, membangun game melalui engine constract, dan juga game canvas dasar. dalam kelas ini saya mendapatkan pengalaman untuk membuat sebuah game dengan engine constract yang berbasis javascipt dan juga mempelajari dasar javascript hingga dapat membuat sebuah game hanya dengan javascipt.",
+    },
   ];
 
   return (
@@ -166,13 +166,13 @@ export default function Home() {
           <div className="flex flex-col gap-4">
             <h3 className="text-3xl font-bold">Tentang Saya</h3>
             <p>
-              Hallo! Saya Farel Nanda Setiawan, seorang junior programmer
-              yang sedang meniti karier di dunia pemrograman. Sebagai seorang
-              lulusan SMK jurusan Rekayasa Perangkat Lunak, saya memiliki
-              semangat tinggi untuk terus belajar dan mengembangkan solusi
-              inovatif melalui pemrograman. Saya memiliki pengalaman berlomba
-              dalam bidang Web Technology dan meraih juara 3 setingkat kota
-              surabaya tahun 2025.
+              Hallo! Saya Farel Nanda Setiawan, seorang junior programmer yang
+              sedang meniti karier di dunia pemrograman. Sebagai seorang lulusan
+              SMK jurusan Rekayasa Perangkat Lunak, saya memiliki semangat
+              tinggi untuk terus belajar dan mengembangkan solusi inovatif
+              melalui pemrograman. Saya memiliki pengalaman berlomba dalam
+              bidang Web Technology dan meraih juara 3 setingkat kota surabaya
+              tahun 2025.
             </p>
             <p>
               Melalui pemrograman saya berminat untuk terus belajar dan
@@ -261,8 +261,12 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="flex justify-center items-center">
-        farel nanda setiawan
+      <footer className="flex flex-col justify-center items-center">
+        <p>
+          Tertarik untuk berkolaborasi atau membangun proyek bersama? Mari
+          terhubung! Saya selalu terbuka untuk diskusi mengenai web development.
+        </p>
+        <p>© 2026 | Dirancang & Dikodekan oleh Farel Nanda Setiawan</p>
       </footer>
     </>
   );
