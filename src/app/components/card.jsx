@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 export default function Card({ src, alt, title, desc, href, techs = [], key }) {
+  const [imgSrc, setImgSrc] = useState(src);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -11,10 +14,13 @@ export default function Card({ src, alt, title, desc, href, techs = [], key }) {
       key={key}
     >
       <Image
-        src={src}
+        src={imgSrc}
         alt={alt || ""}
         width={300}
         height={300}
+        onError={() => {
+          setImgSrc('https://placehold.net/default.png')
+        }}
         className="rounded mb-4 object-cover"
       />
       <div className="flex flex-col">

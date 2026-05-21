@@ -1,7 +1,10 @@
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function LongCard({ src, alt, title, desc, key }) {
+    const [imgSrc, setImgSrc] = useState(src);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -11,10 +14,13 @@ export default function LongCard({ src, alt, title, desc, key }) {
       key={key}
     >
       <Image
-        src={src}
+        src={imgSrc}
         alt={alt || ""}
         width={300}
         height={300}
+        onError={() => {
+            setImgSrc('https://placehold.net/default.png');
+        }}
         className="rounded mb-4 object-cover"
       />
       <div className="flex flex-col gap-4 mt-2">

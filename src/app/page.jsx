@@ -85,7 +85,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "https://placehold.net/default.png"
+        src: ""
       },
       title: "Mengikut Kelas Gamelab Game Developer",
       desc: "pada tahun 2025, saya mengikuti sebuah kelas pelatihan milik Gamelab tentang game developer. dalam kelas ini saya diberikan pelatihan malalui beberapa modul mulai dari dasar javascript, membangun game melalui engine constract, dan juga game canvas dasar. dalam kelas ini saya mendapatkan pengalaman untuk membuat sebuah game dengan engine constract yang berbasis javascipt dan juga mempelajari dasar javascript hingga dapat membuat sebuah game hanya dengan javascipt."
