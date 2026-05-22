@@ -9,7 +9,7 @@ export default function TechBadge({ name, icon }) {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="flex flex-col items-center justify-center bg-primary p-4 rounded"
     >
-      <img src={icon} alt={name} width={50} height={50} />
+      <img src={icon} alt={name} width={50} height={50} loading="lazy"/>
       <span className="text-lg font-bold">{name}</span>
     </motion.div>
   );

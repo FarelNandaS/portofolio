@@ -35,6 +35,7 @@ export default function Home() {
   const handlerNavLink = () => {
     setIsNavigate(true);
     setHidden(false);
+    setIsOpen(false);
 
     setTimeout(() => {
       setIsNavigate(false);
@@ -49,6 +50,10 @@ export default function Home() {
     {
       text: "Tentang",
       href: "#tentang",
+    },
+    {
+      text: "Tech",
+      href: "#tech"
     },
     {
       text: "Proyek",
@@ -272,7 +277,7 @@ export default function Home() {
 
       <section
         className="min-h-[110vh] bg-darker gap-8 p-4 flex flex-col justify-center items-center"
-        id=""
+        id="tech"
       >
         <h3 className="font-bold text-3xl mt-4 ">Tech Stack</h3>
         <motion.div
@@ -353,13 +358,60 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="flex flex-col justify-center items-center p-2">
-        <p>
-          Tertarik untuk berkolaborasi atau membangun proyek bersama? Mari
-          terhubung! Saya selalu terbuka untuk diskusi mengenai web development.
-        </p>
-        <p>© 2026 | Dirancang & Dikodekan oleh Farel Nanda Setiawan</p>
-      </footer>
+      <footer className="w-full bg-base-300 border-t border-base-200 text-base-content mt-20">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-base-200/50">
+          
+          <div className="space-y-3">
+            <h3 className="font-bold text-lg tracking-wide">Farel Nanda S.</h3>
+            <p className="text-sm text-base-content/70 max-w-xs">
+              Junior Web Programmer yang berfokus pada pembangunan aplikasi web modern dan interaktif.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="font-semibold text-sm uppercase tracking-wider">Navigasi</h4>
+            <ul className="space-y-2 text-sm text-base-content/80">
+              {
+                navLinks.map((link, i) => (
+                  <li><Link href={link.href} className="hover:text-primary transition-colors">{link.text}</Link></li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="font-semibold text-sm uppercase tracking-wider">Mari Terhubung</h4>
+            <p className="text-sm text-base-content/70">Selalu terbuka untuk peluang magang, proyek, atau kolaborasi.</p>
+            
+            <div className="flex space-x-4 pt-2">
+              <a href="https://github.com/farelnandas" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-transform hover:-translate-y-1 text-xl">
+                <img src="https://skillicons.dev/icons?i=github" alt="github" width={40} height={40} loading="lazy"/>
+              </a>
+              <a href="https://instagram.com/farelnandas" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-transform hover:-translate-y-1 text-xl">
+                <img src="https://skillicons.dev/icons?i=instagram" alt="instagram" width={40} height={40} loading="lazy"/>
+              </a>
+              <a href="https://linkedin.com/in/farel-nanda-setiawan" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-transform hover:-translate-y-1 text-xl">
+                <img src="https://skillicons.dev/icons?i=linkedin" alt="linkedin" width={40} height={40} loading="lazy"/>
+              </a>
+              <a href="mailto:farelnanda11@gmail.com" className="hover:text-primary transition-transform hover:-translate-y-1 text-xl">
+                <img src="https://skillicons.dev/icons?i=gmail" alt="email" width={40} height={40} loading="lazy"/>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 text-xs text-base-content/60 gap-4">
+          <p>&copy; {new Date().getFullYear()} Farel Nanda Setiawan. All rights reserved.</p>
+          <p className="flex items-center gap-1">
+            Built with <span className="text-secondary font-medium">Next.js</span> & <span className="text-secondary font-medium">Tailwind CSS</span>
+          </p>
+        </div>
+
+      </div>
+    </footer>
     </>
   );
 }
