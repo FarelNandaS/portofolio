@@ -2,24 +2,63 @@
 
 import Image from "next/image";
 import Card from "./components/card";
-import { motion, scale, useMotionValueEvent, useScroll } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  scale,
+  useMotionValueEvent,
+  useScroll,
+} from "motion/react";
 import { useState } from "react";
 import TechBadge from "./components/techBadge";
-import { desc, img, title } from "motion/react-client";
 import LongCard from "./components/longCard";
+import Link from "next/link";
 
 export default function Home() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
+  const [isNavigate, setIsNavigate] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (current) => {
+    if (isNavigate) return;
+
     const prev = scrollY.getPrevious() ?? 0;
     if (current > prev && current > 150) {
       setHidden(true);
+      setIsOpen(false);
     } else {
       setHidden(false);
     }
   });
+
+  const handlerNavLink = () => {
+    setIsNavigate(true);
+    setHidden(false);
+
+    setTimeout(() => {
+      setIsNavigate(false);
+    }, 800);
+  };
+
+  const navLinks = [
+    {
+      text: "Home",
+      href: "#home",
+    },
+    {
+      text: "Tentang",
+      href: "#tentang",
+    },
+    {
+      text: "Proyek",
+      href: "#proyek",
+    },
+    {
+      text: "Pengalaman",
+      href: "#pengalaman",
+    },
+  ];
 
   const techStack = {
     languages: [
@@ -100,30 +139,71 @@ export default function Home() {
           opacity: hidden ? 0 : 1,
           animationDuration: 500,
         }}
-        className="flex justify-between items-center w-full p-4 fixed z-20 text-xl backdrop-blur-sm"
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+        }}
+        className="flex justify-between items-center w-full p-4 fixed z-20 text-xl backdrop-blur-sm bg-primary shadow-xl"
       >
-        <h1 className="text-2xl">Farel</h1>
-        <nav className="hidden md:flex">
-          <ul className="flex gap-6 ">
-            <li>
-              <button className="cursor-pointer hover:underline hover:transition-all hover:duration-150 rounded p-1">
-                Home
-              </button>
-            </li>
-            <li>
-              <button className="cursor-pointer hover:underline hover:transition-all hover:duration-150 rounded p-1">
-                Tentang
-              </button>
-            </li>
-            <li>
-              <button className="cursor-pointer hover:underline hover:transition-all hover:duration-150 rounded p-1">
-                Proyek
-              </button>
-            </li>
+        <h1 className="text-2xl font-serif">Farel Nanda Setiawan</h1>
+        <nav>
+          <ul className="hidden md:flex gap-6">
+            {navLinks.map((link, i) => (
+              <li>
+                <Link
+                  onClick={handlerNavLink}
+                  href={link.href}
+                  className="cursor-pointer hover:underline hover:transition-all hover:duration-150 rounded p-1"
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
           </ul>
+          <button
+            onClick={() => {
+              (setIsOpen(!isOpen), console.log("trigger"));
+            }}
+            className="md:hidden flex justify-center items-center"
+          >
+            <Image
+              src={"/images/menu.png"}
+              width={30}
+              height={30}
+              className=""
+            />
+          </button>
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ height: 0 }}
+                animate={{ height: "auto" }}
+                exit={{ height: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="fixed top-[64px] left-0 md:hidden w-full bg-primary overflow-hidden shadow-xl border-t border-dark"
+              >
+                <ul className="flex flex-col p-4">
+                  {navLinks.map((link, i) => (
+                    <li>
+                      <Link
+                        href={link.href}
+                        onClick={handlerNavLink}
+                        className="cursor-pointer hover:underline hover:transition-all hover:duration-150 rounded p-1"
+                      >
+                        {link.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </nav>
       </motion.header>
-      <section className="h-[100vh] flex flex-col md:flex-row justify-center items-center text-center gap-4 bg-[url('/images/bg-head.jpg')] bg-no-repeat bg-cover bg-fixed bg-opacity-5">
+      <section
+        className="h-[100vh] flex flex-col md:flex-row justify-center items-center text-center gap-4 bg-[url('/images/bg-head.jpg')] bg-no-repeat bg-cover bg-fixed bg-opacity-5"
+        id="home"
+      >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -143,13 +223,16 @@ export default function Home() {
         >
           <h1 className="font-extrabold text-5xl">FAREL NANDA SETIAWAN</h1>
           <h2 className="text-4xl">JUNIOR PROGRAMMER</h2>
-          <button className="bg-primary mt-4 p-2 rounded text-xl">
+          <Link href="#tentang" className="bg-primary flex w-fit mt-2 p-2 rounded text-xl">
             Tentang
-          </button>
+          </Link>
         </motion.div>
       </section>
 
-      <section className="min-h-[110vh] flex justify-center items-center gap-4 z-10 relative">
+      <section
+        className="min-h-[110vh] flex justify-center items-center gap-4 z-10 relative bg-primary"
+        id="tentang"
+      >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +243,7 @@ export default function Home() {
             src={"/images/foto_diri.png"}
             width={300}
             height={300}
-            className="md:w-1/4 rounded-xl bg-primary"
+            className="md:w-1/4 rounded-xl bg-darker"
             alt="foto diri"
           />
           <div className="flex flex-col gap-4">
@@ -180,14 +263,17 @@ export default function Home() {
               berkembangnya teknologi informasi saat ini yang membuat saya ingin
               terus belajar dan terus mencari pengalaman sebanyak-banyak nya.
               Dan dengan terus nya era yang berkembang yang membuat saya ingin
-              selalu memberikan solusi kepada semua masalah yang di berikan
+              selalu memberikan solusi kepada semua masalah yang diberikan
               kepada saya dengan pemrograman.
             </p>
           </div>
         </motion.div>
       </section>
 
-      <section className="min-h-[110vh] bg-dark gap-8 p-4 flex flex-col justify-center items-center">
+      <section
+        className="min-h-[110vh] bg-darker gap-8 p-4 flex flex-col justify-center items-center"
+        id=""
+      >
         <h3 className="font-bold text-3xl mt-4 ">Tech Stack</h3>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -203,7 +289,7 @@ export default function Home() {
           />
           <div className="md:w-2/3 md:ml-12 w-[90vw]">
             <div className="flex flex-col w-[100%] mb-4">
-              <h5 className="text-2xl font-bold mb-4">Bahasa Pemerograman</h5>
+              <h5 className="text-2xl font-bold mb-4">Bahasa pemrograman</h5>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {techStack.languages.map((item, index) => (
                   <TechBadge name={item.name} icon={item.icon} key={index} />
@@ -230,7 +316,10 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="min-h-[110vh] bg-primary gap-8 p-4 flex flex-col justify-center items-center">
+      <section
+        className="min-h-[110vh] bg-primary gap-8 p-4 flex flex-col justify-center items-center"
+        id="proyek"
+      >
         <h3 className="font-bold text-3xl mt-4 ">Proyek</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 h-5/6">
           {projects.map((project, index) => (
@@ -247,7 +336,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-[110vh] bg-dark gap-8 p-4 flex flex-col justify-center items-center">
+      <section
+        className="min-h-[110vh] bg-darker gap-8 p-4 flex flex-col justify-center items-center"
+        id="pengalaman"
+      >
         <h3 className="font-bold text-3xl mt-4 ">Pengalaman</h3>
         <div className="flex flex-col gap-4">
           {experiances.map((expe, i) => (
@@ -261,7 +353,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="flex flex-col justify-center items-center">
+      <footer className="flex flex-col justify-center items-center p-2">
         <p>
           Tertarik untuk berkolaborasi atau membangun proyek bersama? Mari
           terhubung! Saya selalu terbuka untuk diskusi mengenai web development.
