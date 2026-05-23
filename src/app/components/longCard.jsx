@@ -21,7 +21,7 @@ export default function LongCard({ src, alt, title, desc, key }) {
         onError={() => {
             setImgSrc('https://placehold.net/default.png');
         }}
-        className="rounded mb-4 object-cover min-w-[300px] max-h-[200px]"
+        className="rounded object-cover min-w-[300px] max-h-[200px]"
       />
       <div className="flex flex-col gap-4 mt-2">
         <h5 className="font-bold text-xl">{title}</h5>
