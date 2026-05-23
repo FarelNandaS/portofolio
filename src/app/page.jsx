@@ -204,7 +204,7 @@ export default function Home() {
     },
     {
       src: "/carousel/pengalaman/expo-2024-2.jpeg",
-      title: "Both Kolaborasi Expo Expos Jatim 2024",
+      title: "Booth Kolaborasi Expo Expos Jatim 2024",
     },
     {
       src: "/carousel/pengalaman/expo-2026-1.jpeg",
