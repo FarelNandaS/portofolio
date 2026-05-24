@@ -19,7 +19,7 @@ import LongCard from "./components/longCard";
 import "swiper/css";
 import "swiper/css/pagination";
 import Preloader from "./components/preload";
-import { desc } from "motion/react-client";
+import { desc, img, title } from "motion/react-client";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -87,8 +87,8 @@ export default function Home() {
       href: "#keterampilan",
     },
     {
-      text: "Proyek",
-      href: "#proyek",
+      text: "Project",
+      href: "#project",
     },
     {
       text: "Pengalaman",
@@ -124,7 +124,7 @@ export default function Home() {
       desc: "TahuAnimeList adalah aplikasi web untuk mengelola dan menjelajahi daftar anime favorit Anda. Dibangun menggunakan Next.js, aplikasi ini menyediakan antarmuka yang ramah pengguna bagi para penggemar anime.",
       href: "https://tahuanimelist.vercel.app",
       img: {
-        src: "/images/tahuanimelist.png",
+        src: "/images/project/tahuanimelist.png",
         alt: "priview tahuanimelist.png",
       },
     },
@@ -134,19 +134,29 @@ export default function Home() {
       desc: "Ini adalah situs web yang berisi diskusi tentang berbagai hal, dan Anda dapat membuat akun serta mulai membuat topik tentang apa pun yang Anda inginkan. Anda juga dapat memberikan tanggapan dalam suatu topik.",
       href: "https://github.com/FarelNandaS/Discussion",
       img: {
-        src: "/images/discussion.png",
+        src: "/images/project/discussion.png",
         alt: "priview discussion.png",
       },
     },
     {
       title: "Floppy Bird",
       techs: ["javascript"],
-      desc: "ini adalah suatu web game yang terinspirasi dari game legendaris yaitu flappy bird. game ini saya buat untuk tujuan tugas akhir dari kelas game lab menggunakan constract yang berbasis javascript.",
+      desc: "Ini adalah suatu web game yang terinspirasi dari game legendaris yaitu flappy bird. game ini saya buat untuk tujuan tugas akhir dari kelas game lab menggunakan constract yang berbasis javascript.",
       href: "https://farelnandas.github.io/Flapy-Bird",
       img: {
-        src: "/images/floppy-bird.png",
+        src: "/images/project/floppy-bird.png",
         alt: "priview floopy-bird.png",
       },
+    },
+    {
+      title: "WeatherCek",
+      techs: ["python"],
+      desc: "Ini adalah project yang saya buat untuk belajar tentang bahasa pemerograman python. Dasar nya project ini adalah web aplikasi pemantau dan analisis cuaca yang berbasis python.",
+      href: "https://github.com/FarelNandaS/WeatherCek",
+      img: {
+        src: "/images/project/weatherCek.png",
+        alt: "priview WeatherCek"
+      }
     },
   ];
 
@@ -195,46 +205,46 @@ export default function Home() {
 
   const fotoPengalaman = [
     {
-      src: "/carousel/pengalaman/LKS-1.jpeg",
+      src: "/images/carousel/pengalaman/LKS-1.jpeg",
       title: "Juara 3 LKS Web Technology 2025",
     },
     {
-      src: "/carousel/pengalaman/expo-2024-1.jpeg",
+      src: "/images/carousel/pengalaman/expo-2024-1.jpeg",
       title: "Peserta Expo Expos Jatim 2024",
     },
     {
-      src: "/carousel/pengalaman/expo-2024-2.jpeg",
+      src: "/images/carousel/pengalaman/expo-2024-2.jpeg",
       title: "Booth Kolaborasi Expo Expos Jatim 2024",
     },
     {
-      src: "/carousel/pengalaman/expo-2026-1.jpeg",
+      src: "/images/carousel/pengalaman/expo-2026-1.jpeg",
       title: "Peserta Expo Expos Jatim 2026",
     },
     {
-      src: "/carousel/pengalaman/expo-2026-2.jpeg",
+      src: "/images/carousel/pengalaman/expo-2026-2.jpeg",
       title: "Peserta Expo Expos Jatim 2026",
     },
   ];
 
   const sertifikat = [
     {
-      src: "/carousel/sertifikat/sertifikat-LKS.png",
+      src: "/images/carousel/sertifikat/sertifikat-LKS.png",
       title: "Sertifikat juara 3 LKS Web Technology 2025",
     },
     {
-      src: "/carousel/sertifikat/sertifikat-game-lab-on-boarding-game-lab.png",
+      src: "/images/carousel/sertifikat/sertifikat-game-lab-on-boarding-game-lab.png",
       title: "Sertifikat Kelas Online Gamelab On Boarding",
     },
     {
-      src: "/carousel/sertifikat/sertifikat-game-lab-javascript-gamedev.png",
+      src: "/images/carousel/sertifikat/sertifikat-game-lab-javascript-gamedev.png",
       title: "Sertifikat Kelas Online Gamelab Javascript Gamedev",
     },
     {
-      src: "/carousel/sertifikat/sertifikat-game-lab-construct.png",
+      src: "/images/carousel/sertifikat/sertifikat-game-lab-construct.png",
       title: "Sertifikat Kelas Online Gamelab Construct",
     },
     {
-      src: "/carousel/sertifikat/radnet.png",
+      src: "/images/carousel/sertifikat/radnet.png",
       title: "Sertifikat Webinar Domain By Radnet",
     },
   ];
@@ -452,9 +462,9 @@ export default function Home() {
 
         <section
           className="min-h-[110vh] bg-primary gap-8 p-4 flex flex-col justify-center items-center"
-          id="proyek"
+          id="project"
         >
-          <h3 className="font-bold text-3xl mt-4 ">Proyek</h3>
+          <h3 className="font-bold text-3xl mt-4 ">Project</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 h-5/6">
             {projects.map((project, index) => (
               <Card
