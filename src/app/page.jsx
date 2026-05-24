@@ -163,7 +163,7 @@ export default function Home() {
   const experiances = [
     {
       img: {
-        src: "/images/expo-2026.jpeg",
+        src: "/images/pengalaman/expo-2026.jpeg",
         alt: "expo-2026",
       },
       title: "Menjadi Peserta Dalam Pameran Expo Expos Jatim 2026",
@@ -171,7 +171,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "/images/magang.jpeg",
+        src: "/images/pengalaman/magang.jpeg",
         alt: "magang",
       },
       title: "Melakukan Magang di PT.ITPI",
@@ -179,7 +179,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "/images/LKS.jpeg",
+        src: "/images/pengalaman/LKS.jpeg",
         alt: "LKS",
       },
       title: "Mengikuti Lomba Kompetensi Siswa (LKS) 2025",
@@ -187,7 +187,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "/images/gamelab.jpeg",
+        src: "/images/pengalaman/gamelab.jpeg",
         alt: "gamelab",
       },
       title: "Mengikut Kelas Gamelab Game Developer",
@@ -195,7 +195,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "/images/expo-2024.jpeg",
+        src: "/images/pengalaman/expo-2024.jpeg",
         alt: "expo-2024",
       },
       title: "Menjadi Peserta Dalam Pameran Expo Expos Jatim 2024",
