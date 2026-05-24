@@ -13,10 +13,15 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Farel Nanda Setiawan",
-  description: "Web Portofolio",
+  title: "Farel Nanda Setiawan | Portofolio Junior Programmer",
+  description: "Web Portofolio Farel Nanda Setiawan, Seorang Junior Programmer Berbasis Di Surabaya",
+  keywords: ['Farel Nanda', 'Farel Nanda Setiawan', 'Farel Nanda Portofolio', 'Programmer Surabaya', 'SMKN 2 Surabaya'],
+  authors: [{name: "Farel Nanda Setiawan"}],
   icons: {
     icon: "/images/favicon.png",
+  },
+  verification: {
+    google: "agROQ63Dl86d7ogJSvW5QOatzS1VTv9cNA0RIvJPuq4"
   }
 };
 
