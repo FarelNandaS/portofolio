@@ -15,6 +15,12 @@ const geistMono = localFont({
 export const metadata = {
   title: "Farel Nanda Setiawan | Portofolio Junior Programmer",
   description: "Web Portofolio Farel Nanda Setiawan, Seorang Junior Programmer Berbasis Di Surabaya",
+  openGraph: {
+    siteName: "Farel Nanda",
+    title: "Farel Nanda Setiawan | Portofolio Junior Programmer",
+    description: "Hallo! Saya Farel Nanda Setiawan, seorang junior programmer...",
+    type: "website",
+  },
   keywords: ['Farel Nanda', 'Farel Nanda Setiawan', 'Farel Nanda Portofolio', 'Programmer Surabaya', 'SMKN 2 Surabaya'],
   authors: [{name: "Farel Nanda Setiawan"}],
   icons: {
