@@ -139,6 +139,16 @@ export default function Home() {
       },
     },
     {
+      title: "StockinAja",
+      techs: ["laravel", "react"],
+      desc: "Ini adalah website tentang management gudang yang di buat dengan laravel 13 + react starter kit. Dalam website ini anda bisa mengelola product di gudang anda dengan transparant.",
+      href: "https://github.com/FarelNandaS/StockinAja",
+      img: {
+        src: "/images/project/StockinAja.png",
+        alt: "priview StockinAja"
+      }
+    },
+    {
       title: "Floppy Bird",
       techs: ["javascript"],
       desc: "Ini adalah suatu web game yang terinspirasi dari game legendaris yaitu flappy bird. game ini saya buat untuk tujuan tugas akhir dari kelas game lab menggunakan constract yang berbasis javascript.",
