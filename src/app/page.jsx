@@ -257,6 +257,14 @@ export default function Home() {
       src: "/images/carousel/sertifikat/radnet.png",
       title: "Sertifikat Webinar Domain By Radnet",
     },
+    {
+      src: "/images/carousel/sertifikat/sertifikat-PKL.png",
+      title: "Sertifikat PKL By SMKN 2 Surabaya",
+    },
+    {
+      src: "/images/carousel/sertifikat/sertifikat-kompetensi.png",
+      title: "Sertifikat Kompetensi",
+    },
   ];
 
   const swiperAutoConfig = {
