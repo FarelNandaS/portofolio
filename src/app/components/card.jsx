@@ -36,7 +36,7 @@ export default function Card({ src, alt, title, desc, href, techs = [], key }) {
           ))}
         </div>
         <p className="line-clamp-6 mb-4">{desc}</p>
-        <a
+        <a target="_blank"
           href={href}
           className="bg-light text-darker hover:bg-fiveth transition-all duration-150 p-1 rounded mt-auto mr-auto"
         >

@@ -168,6 +168,16 @@ export default function Home() {
         alt: "priview WeatherCek"
       }
     },
+    {
+      title: "MyMoney",
+      techs: ["nextjs", "vercel"],
+      desc: "Ini adalah project yang saya buat karena terinspirasi oleh teman saya. saya ingin project ini menjadi aplikasi pengelola keuangan seseorang yang sangat berguna.",
+      href: "https://mymoney-id.vercel.app",
+      img: {
+        src: "/images/project/MyMoney.png",
+        alt: "priview MyMoney.png",
+      },
+    },
   ];
 
   const experiances = [
