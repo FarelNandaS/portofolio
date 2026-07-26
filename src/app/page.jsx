@@ -100,8 +100,8 @@ export default function Home() {
     languages: [
       { name: "JavaScript", icon: "https://skillicons.dev/icons?i=javascript" },
       { name: "PHP", icon: "https://skillicons.dev/icons?i=php" },
-      { name: "HTML5", icon: "https://skillicons.dev/icons?i=html" },
-      { name: "CSS3", icon: "https://skillicons.dev/icons?i=css" },
+      { name: "Python", icon: "https://skillicons.dev/icons?i=python" },
+      { name: "Typescript", icon: "https://skillicons.dev/icons?i=typescript" },
     ],
     frameworks: [
       { name: "Next.js", icon: "https://skillicons.dev/icons?i=nextjs" },
@@ -274,6 +274,14 @@ export default function Home() {
     {
       src: "/images/carousel/sertifikat/sertifikat-kompetensi.png",
       title: "Sertifikat Kompetensi",
+    },
+    {
+      src: "/images/carousel/sertifikat/dicoding-data-science-microsoft-fabric.png",
+      title: "Sertifikat Dicoding Data Science Microsoft Fabric",
+    },
+    {
+      src: "/images/carousel/sertifikat/dicoding-membangun-gen-AI-dengan-microsoft-azure.png",
+      title: "Sertifikat Dicoding Membangun Gen AI Dengan Microsoft Azure",
     },
   ];
 
