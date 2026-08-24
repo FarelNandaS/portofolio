@@ -341,6 +341,7 @@ export default function Home() {
               ))}
             </ul>
             <button
+              aria-label="Menu Button"
               onClick={() => {
                 (setIsOpen(!isOpen), console.log("trigger"));
               }}
@@ -348,6 +349,7 @@ export default function Home() {
             >
               <Image
                 src={"/images/menu.png"}
+                alt="Menu"
                 width={30}
                 height={30}
                 className=""
@@ -391,9 +393,10 @@ export default function Home() {
           >
             <Image
               src={"/images/programmer.svg"}
+              alt="Programmer"
               width={400}
               height={400}
-              fetchPriority="high"
+              priority
             ></Image>
           </motion.div>
           <motion.div
@@ -468,10 +471,11 @@ export default function Home() {
           >
             <Image
               src={"/images/tech-stack.svg"}
+              alt="Tech Stack"
               width={300}
               height={300}
               className=" mb-4 md:mb-0 md:w-1/3 w-[90vw]"
-              fetchPriority="high"
+              priority
             />
             <div className="md:w-2/3 md:ml-12 w-[90vw]">
               <div className="flex flex-col w-[100%] mb-4">
