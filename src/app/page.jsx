@@ -423,7 +423,7 @@ export default function Home() {
             className="flex flex-col md:flex-row justify-center items-center gap-8 m-8 w-[80%]"
           >
             <Image
-              src={"/images/foto_diri.png"}
+              src={"/images/foto_diri.webp"}
               width={300}
               height={300}
               className="md:w-1/4 rounded-xl bg-darker"
