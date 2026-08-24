@@ -98,22 +98,22 @@ export default function Home() {
 
   const techStack = {
     languages: [
-      { name: "JavaScript", icon: "https://skillicons.dev/icons?i=javascript" },
-      { name: "PHP", icon: "https://skillicons.dev/icons?i=php" },
-      { name: "Python", icon: "https://skillicons.dev/icons?i=python" },
-      { name: "Typescript", icon: "https://skillicons.dev/icons?i=typescript" },
+      { name: "JavaScript", icon: "/images/tech-stack/JavaScript.svg" },
+      { name: "PHP", icon: "/images/tech-stack/PHP.svg" },
+      { name: "Python", icon: "/images/tech-stack/Python.svg" },
+      { name: "Typescript", icon: "/images/tech-stack/TypeScript.svg" },
     ],
     frameworks: [
-      { name: "Next.js", icon: "https://skillicons.dev/icons?i=nextjs" },
-      { name: "React", icon: "https://skillicons.dev/icons?i=react" },
-      { name: "Tailwind CSS", icon: "https://skillicons.dev/icons?i=tailwind" },
-      { name: "Laravel", icon: "https://skillicons.dev/icons?i=laravel" },
+      { name: "Next.js", icon: "/images/tech-stack/NextJS.svg" },
+      { name: "React", icon: "/images/tech-stack/React.svg" },
+      { name: "Tailwind CSS", icon: "/images/tech-stack/TailwindCSS.svg" },
+      { name: "Laravel", icon: "/images/tech-stack/Laravel.svg" },
     ],
     tools: [
-      { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
-      { name: "GitHub", icon: "https://skillicons.dev/icons?i=github" },
-      { name: "VS Code", icon: "https://skillicons.dev/icons?i=vscode" },
-      { name: "Postman", icon: "https://skillicons.dev/icons?i=postman" },
+      { name: "Git", icon: "/images/tech-stack/Git.svg" },
+      { name: "GitHub", icon: "/images/tech-stack/Github.svg" },
+      { name: "VS Code", icon: "/images/tech-stack/VSCode.svg" },
+      { name: "Postman", icon: "/images/tech-stack/Postman.svg" },
     ],
   };
 
