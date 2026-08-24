@@ -124,8 +124,8 @@ export default function Home() {
       desc: "TahuAnimeList adalah aplikasi web untuk mengelola dan menjelajahi daftar anime favorit Anda. Dibangun menggunakan Next.js, aplikasi ini menyediakan antarmuka yang ramah pengguna bagi para penggemar anime.",
       href: "https://tahuanimelist.vercel.app",
       img: {
-        src: "/images/project/tahuanimelist.png",
-        alt: "priview tahuanimelist.png",
+        src: "/images/project/tahuanimelist.webp",
+        alt: "priview tahuanimelist.webp",
       },
     },
     {
@@ -134,8 +134,8 @@ export default function Home() {
       desc: "Ini adalah situs web yang berisi diskusi tentang berbagai hal, dan Anda dapat membuat akun serta mulai membuat topik tentang apa pun yang Anda inginkan. Anda juga dapat memberikan tanggapan dalam suatu topik.",
       href: "https://github.com/FarelNandaS/Discussion",
       img: {
-        src: "/images/project/discussion.png",
-        alt: "priview discussion.png",
+        src: "/images/project/discussion.webp",
+        alt: "priview discussion.webp",
       },
     },
     {
@@ -144,8 +144,8 @@ export default function Home() {
       desc: "Ini adalah website tentang management gudang yang di buat dengan laravel 13 + react starter kit. Dalam website ini anda bisa mengelola product di gudang anda dengan transparant.",
       href: "https://github.com/FarelNandaS/StockinAja",
       img: {
-        src: "/images/project/StockinAja.png",
-        alt: "priview StockinAja"
+        src: "/images/project/StockinAja.webp",
+        alt: "priview StockinAja.webp"
       }
     },
     {
@@ -154,8 +154,8 @@ export default function Home() {
       desc: "Ini adalah suatu web game yang terinspirasi dari game legendaris yaitu flappy bird. game ini saya buat untuk tujuan tugas akhir dari kelas game lab menggunakan constract yang berbasis javascript.",
       href: "https://farelnandas.github.io/Flapy-Bird",
       img: {
-        src: "/images/project/floppy-bird.png",
-        alt: "priview floopy-bird.png",
+        src: "/images/project/floppy-bird.webp",
+        alt: "priview floopy-bird.webp",
       },
     },
     {
@@ -164,8 +164,8 @@ export default function Home() {
       desc: "Ini adalah project yang saya buat untuk belajar tentang bahasa pemerograman python. Dasar nya project ini adalah web aplikasi pemantau dan analisis cuaca yang berbasis python.",
       href: "https://github.com/FarelNandaS/WeatherCek",
       img: {
-        src: "/images/project/weatherCek.png",
-        alt: "priview WeatherCek"
+        src: "/images/project/weatherCek.webp",
+        alt: "priview WeatherCek.webp"
       }
     },
     {
@@ -174,8 +174,8 @@ export default function Home() {
       desc: "Ini adalah project yang saya buat karena terinspirasi oleh teman saya. saya ingin project ini menjadi aplikasi pengelola keuangan seseorang yang sangat berguna.",
       href: "https://mymoney-id.vercel.app",
       img: {
-        src: "/images/project/MyMoney.png",
-        alt: "priview MyMoney.png",
+        src: "/images/project/MyMoney.webp",
+        alt: "priview MyMoney.webp",
       },
     },
   ];
@@ -183,7 +183,7 @@ export default function Home() {
   const experiances = [
     {
       img: {
-        src: "/images/pengalaman/expo-2026.jpeg",
+        src: "/images/pengalaman/expo-2026.webp",
         alt: "expo-2026",
       },
       title: "Menjadi Peserta Dalam Pameran Expo Expos Jatim 2026",
@@ -191,7 +191,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "/images/pengalaman/magang.jpeg",
+        src: "/images/pengalaman/magang.webp",
         alt: "magang",
       },
       title: "Melakukan Magang di PT.ITPI",
@@ -199,7 +199,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "/images/pengalaman/LKS.jpeg",
+        src: "/images/pengalaman/LKS.webp",
         alt: "LKS",
       },
       title: "Mengikuti Lomba Kompetensi Siswa (LKS) 2025",
@@ -207,7 +207,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "/images/pengalaman/gamelab.jpeg",
+        src: "/images/pengalaman/gamelab.webp",
         alt: "gamelab",
       },
       title: "Mengikut Kelas Gamelab Game Developer",
@@ -215,7 +215,7 @@ export default function Home() {
     },
     {
       img: {
-        src: "/images/pengalaman/expo-2024.jpeg",
+        src: "/images/pengalaman/expo-2024.webp",
         alt: "expo-2024",
       },
       title: "Menjadi Peserta Dalam Pameran Expo Expos Jatim 2024",
@@ -225,63 +225,67 @@ export default function Home() {
 
   const fotoPengalaman = [
     {
-      src: "/images/carousel/pengalaman/LKS-1.jpeg",
+      src: "/images/carousel/pengalaman/LKS-1.webp",
       title: "Juara 3 LKS Web Technology 2025",
     },
     {
-      src: "/images/carousel/pengalaman/expo-2024-1.jpeg",
+      src: "/images/carousel/pengalaman/expo-2024-1.webp",
       title: "Peserta Expo Expos Jatim 2024",
     },
     {
-      src: "/images/carousel/pengalaman/expo-2024-2.jpeg",
+      src: "/images/carousel/pengalaman/expo-2024-2.webp",
       title: "Booth Kolaborasi Expo Expos Jatim 2024",
     },
     {
-      src: "/images/carousel/pengalaman/expo-2026-1.jpeg",
+      src: "/images/carousel/pengalaman/expo-2026-1.webp",
       title: "Peserta Expo Expos Jatim 2026",
     },
     {
-      src: "/images/carousel/pengalaman/expo-2026-2.jpeg",
+      src: "/images/carousel/pengalaman/expo-2026-2.webp",
       title: "Peserta Expo Expos Jatim 2026",
     },
   ];
 
   const sertifikat = [
     {
-      src: "/images/carousel/sertifikat/sertifikat-LKS.png",
+      src: "/images/carousel/sertifikat/sertifikat-LKS.webp",
       title: "Sertifikat juara 3 LKS Web Technology 2025",
     },
     {
-      src: "/images/carousel/sertifikat/sertifikat-game-lab-on-boarding-game-lab.png",
+      src: "/images/carousel/sertifikat/sertifikat-game-lab-on-boarding-game-lab.webp",
       title: "Sertifikat Kelas Online Gamelab On Boarding",
     },
     {
-      src: "/images/carousel/sertifikat/sertifikat-game-lab-javascript-gamedev.png",
+      src: "/images/carousel/sertifikat/sertifikat-game-lab-javascript-gamedev.webp",
       title: "Sertifikat Kelas Online Gamelab Javascript Gamedev",
     },
     {
-      src: "/images/carousel/sertifikat/sertifikat-game-lab-construct.png",
+      src: "/images/carousel/sertifikat/sertifikat-game-lab-construct.webp",
       title: "Sertifikat Kelas Online Gamelab Construct",
     },
     {
-      src: "/images/carousel/sertifikat/radnet.png",
+      src: "/images/carousel/sertifikat/radnet.webp",
       title: "Sertifikat Webinar Domain By Radnet",
     },
     {
-      src: "/images/carousel/sertifikat/sertifikat-PKL.png",
+      src: "/images/carousel/sertifikat/sertifikat-PKL.webp",
       title: "Sertifikat PKL By SMKN 2 Surabaya",
     },
     {
-      src: "/images/carousel/sertifikat/sertifikat-kompetensi.png",
+      src: "/images/carousel/sertifikat/sertifikat-kompetensi.webp",
       title: "Sertifikat Kompetensi",
     },
     {
-      src: "/images/carousel/sertifikat/dicoding-data-science-microsoft-fabric.png",
+      src: "/images/carousel/sertifikat/dicoding-data-science-microsoft-fabric.webp",
       title: "Sertifikat Dicoding Data Science Microsoft Fabric",
     },
     {
-      src: "/images/carousel/sertifikat/dicoding-membangun-gen-AI-dengan-microsoft-azure.png",
+      src: "/images/carousel/sertifikat/dicoding-membangun-gen-AI-dengan-microsoft-azure.webp",
       title: "Sertifikat Dicoding Membangun Gen AI Dengan Microsoft Azure",
+    },
+    {
+      src: "/images/carousel/sertifikat/hacktiv8-AI-for-work-&-career.webp",
+      title: "Sertifikat hactiv8 AI for work & career",
     },
   ];
 
