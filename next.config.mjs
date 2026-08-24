@@ -4,12 +4,6 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "skillicons.dev",
-                port: "",
-                pathname: "/**",
-            },
-            {
-                protocol: "https",
                 hostname: "placehold.net",
                 port: "",
                 pathname: "/**",
