@@ -518,6 +518,44 @@ export default function Home() {
               />
             ))}
           </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mb-4"
+          >
+            <a
+              href="https://github.com/FarelNandaS?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 bg-darker text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-opacity-90 hover:scale-105 transition-all duration-300 border border-white/10"
+            >
+              <span>Lihat Proyek Lainnya di GitHub</span>
+              
+              {/* Icon GitHub Mini */}
+              <img
+                src="https://skillicons.dev/icons?i=github"
+                alt="GitHub"
+                className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300"
+              />
+
+              {/* Icon Panah Memantul ke Kanan */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </a>
+          </motion.div>
         </section>
 
         <section
