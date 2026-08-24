@@ -397,6 +397,7 @@ export default function Home() {
               width={400}
               height={400}
               priority
+              loading="eager"
             ></Image>
           </motion.div>
           <motion.div
@@ -475,7 +476,6 @@ export default function Home() {
               width={300}
               height={300}
               className=" mb-4 md:mb-0 md:w-1/3 w-[90vw]"
-              priority
             />
             <div className="md:w-2/3 md:ml-12 w-[90vw]">
               <div className="flex flex-col w-[100%] mb-4">
